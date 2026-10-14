@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Toy Lookalikes from Product Image"
+  short_description: "Find three-tier Amazon toy lookalikes from product images."
+  default_prompt: "Use $find-toy-lookalikes-from-product-image to find a three-tier Amazon lookalike market from this product information image."

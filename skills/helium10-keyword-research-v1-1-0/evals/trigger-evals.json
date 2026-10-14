@@ -1,0 +1,68 @@
+[
+  {
+    "id": "TR-001",
+    "input": "用 Helium 10 插件查这 3 个 ASIN 的关键词，以自然排名为主生成 Excel。",
+    "should_trigger": true,
+    "expected_behavior": "触发后确认 2–5 个 ASIN、同一站点和变体口径，再通过 Helium 10 插件只读拉取 Cerebro 数据。"
+  },
+  {
+    "id": "TR-002",
+    "input": "把五个竞品的 Cerebro 词汇总，按搜索量降序，只留至少一个自然位前 24 的词。",
+    "should_trigger": true,
+    "expected_behavior": "生成五组 ASIN 分色的单表 Excel，并执行自然排名过滤；广告排名仅作辅助。"
+  },
+  {
+    "id": "TR-003",
+    "input": "做一张 Helium 10 多 ASIN 关键词调研表，但我还没准备 ASIN。",
+    "should_trigger": true,
+    "expected_behavior": "先索取 2–5 个 ASIN、站点和变体口径，不调用工具。"
+  },
+  {
+    "id": "TR-004",
+    "input": "用 Helium 10 给这个单个 ASIN 导出所有原始关键词，不要合并表。",
+    "should_trigger": false,
+    "expected_behavior": "这是单 ASIN 原始导出，不进入 2–5 ASIN 汇总流程。"
+  },
+  {
+    "id": "TR-005",
+    "input": "分析广告搜索词报表，给我否词和出价建议。",
+    "should_trigger": false,
+    "expected_behavior": "转交广告分析能力，不触发本 Skill。"
+  },
+  {
+    "id": "TR-006",
+    "input": "用 SellerSprite 比较这三个 ASIN 的流量词。",
+    "should_trigger": false,
+    "expected_behavior": "用户指定其他来源，不触发 Helium 10 固定来源 Skill。"
+  },
+  {
+    "id": "TR-007",
+    "input": "把这三个 ASIN 的关键词直接加入 Helium 10 Keyword Tracker。",
+    "should_trigger": false,
+    "expected_behavior": "这是外部写入和排名追踪任务，不触发只读汇总 Skill。"
+  },
+  {
+    "id": "TR-008",
+    "input": "重写这个亚马逊 Listing 的标题、五点和 Search Terms。",
+    "should_trigger": false,
+    "expected_behavior": "转交 Listing 撰写 Skill。"
+  },
+  {
+    "id": "TR-009",
+    "input": "刚在这个长对话里跑完一轮 Helium 10，现在换四个 ASIN 再跑一次。",
+    "should_trigger": true,
+    "expected_behavior": "只建议一次在新对话粘贴最小启动模板；如果用户继续当前对话，不阻断任务，并改用批量工具调用与大结果落盘策略。"
+  },
+  {
+    "id": "TR-010",
+    "input": "继续在当前对话跑，不要另开线程：用 Helium 10 汇总这三个 ASIN。",
+    "should_trigger": true,
+    "expected_behavior": "尊重用户选择并直接执行；不得创建或分叉线程，不得把新线程建议当作业务门禁。"
+  },
+  {
+    "id": "TR-011",
+    "input": "汇报这次 Helium 10 任务的 Token；如果系统没有逐轮 usage 就不要估算。",
+    "should_trigger": true,
+    "expected_behavior": "仅在运行环境直接提供本轮 usage 时报告；否则输出 TOKEN_USAGE=NOT_AVAILABLE，且不额外扫描整段 rollout。"
+  }
+]

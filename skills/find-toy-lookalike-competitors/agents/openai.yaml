@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Toy Lookalike Competitors"
+  short_description: "Find and tier visually similar Amazon toy competitors."
+  default_prompt: "Use $find-toy-lookalike-competitors to find and tier visually similar Amazon toy competitors from this product URL."

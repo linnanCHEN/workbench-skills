@@ -1,0 +1,4 @@
+interface:
+  display_name: "Amazon Scraper VPS"
+  short_description: "Run secure Amazon scraping continuously on a VPS."
+  default_prompt: "Use $amazon-scraper-vps to scrape an Amazon URL through the VPS proxy service."

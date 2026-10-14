@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "scope": "three workbench tools and their required VPS dependency",
+  "skills": [
+    "helium10-keyword-research-v1-1-0",
+    "find-toy-lookalike-competitors",
+    "find-toy-lookalikes-from-product-image",
+    "amazon-scraper-vps"
+  ],
+  "files": [
+    {
+      "path": "skills/amazon-scraper-vps/agents/openai.yaml",
+      "bytes": 224,
+      "sha256": "c4291aec3480715b14c2d369600d2d6e0355a77771e56527e673dc3650fba6f9"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/assets/service/assets/amazon_handler.js",
+      "bytes": 23915,
+      "sha256": "c00a93d9960e9d5aed8167d373a09b0b27689a22c20e1a03ab16b36232948420"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/assets/service/compose.yml",
+      "bytes": 613,
+      "sha256": "e0b74be68bce19049fa91231bfcaf948801cb67f8957de71f584cfa6276b439f"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/assets/service/config/proxies.json",
+      "bytes": 20,
+      "sha256": "1d90c5f0989b408294d941098f1688adfe768e79853182609ad6abf170006b2f"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/assets/service/Dockerfile",
+      "bytes": 257,
+      "sha256": "af705ebea3ee66dded9e6c0f64fe9afbb2c2339888b52f3c2379122c61d20564"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/assets/service/package.json",
+      "bytes": 888,
+      "sha256": "8554e6f9ded3000f884f17241b3de5e69b8795ba0e70b1d1e9769062ab799f18"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/assets/service/server.js",
+      "bytes": 8249,
+      "sha256": "e887c355479f5010a4e2cfe3c545160f646699da238c41d082c27ee64274ef26"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/references/api.md",
+      "bytes": 1959,
+      "sha256": "45836c427073888630d8713cf59f563d9f3b716243e03261a9447b9dacac03a6"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/scripts/call_vps.py",
+      "bytes": 6849,
+      "sha256": "f834c6193cde06b6305ac349e83cc485d387441cc2e5eff7f83d4f396a6074af"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/SKILL.md",
+      "bytes": 3632,
+      "sha256": "709b00ff288cd2942300beba1d2152aba190226637aa5f66768f93332a36ef8f"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/tests/test_public_config.py",
+      "bytes": 2148,
+      "sha256": "95b68cabd823addedfe6ee29e95627b9410facbd2150d3c5717bb429fd150646"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/agents/openai.yaml",
+      "bytes": 278,
+      "sha256": "5113353abf2619ac4240a2dc6a147704bbf9b9fce3f3ae96ba95b39f57150d08"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/references/coverage-evidence.md",
+      "bytes": 5898,
+      "sha256": "87f5264037d9ab7414e043c11258abdd349e103a93feaaa150cdfa609edd44fe"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/references/output-schema.md",
+      "bytes": 2996,
+      "sha256": "27233da613d9c94bd2f8ef14e15dd15924081a2df6d25bc4ede7940a16a34826"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/references/tiering-rules.md",
+      "bytes": 3337,
+      "sha256": "50b4e4560415e9d3c827b88f38926551f57ed51adc06c0d1342f6dbb1b328d62"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/scripts/build_contact_sheet.py",
+      "bytes": 4234,
+      "sha256": "1eb95506ed09e999fe2b9cf5d94c50a3d8e159d288a3014f8513c9675fd3a352"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/scripts/compile_tiers.py",
+      "bytes": 4191,
+      "sha256": "0e51c2c65a8d140c13a868b959cbb97c7a2b4539480e1eae454e9760fa4ef81f"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/scripts/merge_candidate_sources.py",
+      "bytes": 3230,
+      "sha256": "042a7aa2eb890e0bdcf2026204a945705fe0b26e19adee0e92871d89e72e0473"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/scripts/vps_download_images.py",
+      "bytes": 4235,
+      "sha256": "e4bf69a25adae245d89a8139cd5c6b6ba4619645399fd600ef7ac3951e9b986b"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/scripts/vps_search_candidates.py",
+      "bytes": 4470,
+      "sha256": "d8a6acf63f84c24ab09a5f2697e2cdc9a7c5d6a63a7776ec8d73790823c416bd"
+    },
+    {
+      "path": "skills/find-toy-lookalike-competitors/SKILL.md",
+      "bytes": 23646,
+      "sha256": "7cecfc3beb3c1104530b4ae145c60a9d6f5c23f03ae99eda0feaa30769c32180"
+    },
+    {
+      "path": "skills/find-toy-lookalikes-from-product-image/agents/openai.yaml",
+      "bytes": 300,
+      "sha256": "99a1c5ecc5d6920b9f2247e1fae61e3f1dd81475537631e1fdd318021fb68337"
+    },
+    {
+      "path": "skills/find-toy-lookalikes-from-product-image/references/image-intake-schema.md",
+      "bytes": 2851,
+      "sha256": "813b7e9025dbe0fbefb64f3812970e70af58a856081a9967f6a487e7bf68b055"
+    },
+    {
+      "path": "skills/find-toy-lookalikes-from-product-image/SKILL.md",
+      "bytes": 9711,
+      "sha256": "8ac9612ff593ca86292621ecbd7976f35cfcb45e0e2c52443d6fae0427962759"
+    },
+    {
+      "path": "skills/helium10-keyword-research-v1-1-0/agents/openai.yaml",
+      "bytes": 951,
+      "sha256": "b8d37e4cb11d3109ffed566ebcc6161b3f2b074efd9f51cc8f3227d2ecaac112"
+    },
+    {
+      "path": "skills/helium10-keyword-research-v1-1-0/evals/trigger-evals.json",
+      "bytes": 2964,
+      "sha256": "3cce30f506c37147adc7277266a524c6d17fb44d38899ff0b926219f470748e1"
+    },
+    {
+      "path": "skills/helium10-keyword-research-v1-1-0/references/context-efficiency.md",
+      "bytes": 2702,
+      "sha256": "b55d50e13f7e10e5803e25c9a467f7cec105b60e740cf83c36144b9b481f4c48"
+    },
+    {
+      "path": "skills/helium10-keyword-research-v1-1-0/scripts/build_keyword_workbook.py",
+      "bytes": 13277,
+      "sha256": "08ee472aa05f1a48b03b965583636a225fc069377e11e86f9df4ab293a0e9e88"
+    },
+    {
+      "path": "skills/helium10-keyword-research-v1-1-0/SKILL.md",
+      "bytes": 13218,
+      "sha256": "de79f9a5237cb832c3cdb4860d256defc2b7d8cc015ab9be8f46090c10bf7a79"
+    },
+    {
+      "path": "skills/helium10-keyword-research-v1-1-0/SKILL.patch.md",
+      "bytes": 1597,
+      "sha256": "40631294e4c679b8f5760168da642da51df8ae77ec2a0a38c8ac9a418d7832cd"
+    },
+    {
+      "path": "skills/helium10-keyword-research-v1-1-0/tests/test_build_keyword_workbook.py",
+      "bytes": 10927,
+      "sha256": "b17e2c53b581aa6c1d2381a3ce7e214de939fd7c317c53c7d606f15be62fc7d4"
+    },
+    {
+      "path": "skills/helium10-keyword-research-v1-1-0/tests/test_context_efficiency_contract.py",
+      "bytes": 1973,
+      "sha256": "55f3c9b716df5b6848dd0431f9f0e666fef700cad31c7f0764d5d61b13bc69d2"
+    }
+  ]
+}

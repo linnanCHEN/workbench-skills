@@ -1,0 +1,28 @@
+services:
+  amazon-scraper:
+    build: .
+    container_name: amazon-scraper-vps
+    restart: unless-stopped
+    init: true
+    shm_size: "1gb"
+    env_file:
+      - .env
+    environment:
+      PORT: "8790"
+    networks:
+      - amazon-scraper
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - fetch('http://127.0.0.1:8790/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+networks:
+  amazon-scraper:
+    external: true
+    name: amazon-scraper-network

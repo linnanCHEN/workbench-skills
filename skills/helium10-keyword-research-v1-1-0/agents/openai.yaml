@@ -1,0 +1,16 @@
+interface:
+  display_name: "Helium 10 关键词汇总 v1.1.0（隔离版）"
+  short_description: "汇总 2–5 个 ASIN 的 Cerebro 关键词，以自然排名为核心过滤并生成彩色 Excel。"
+  default_prompt: >-
+    使用 $helium10-keyword-research-v1-1-0 对同一站点的 2–5 个 ASIN 做只读关键词调研。
+    先收集 ASIN、站点和变体口径，再调用 Helium 10 插件；仅保留至少一个 ASIN 自然排名前 24 的关键词，
+    按搜索量降序生成一张不同 ASIN 分色的 Excel 汇总表。自然排名是核心，广告排名存在时作为辅助字段保留。
+    如果当前对话已经包含上一轮调研或大量无关历史，先建议用户用最小输入在新对话运行；用户选择继续时不得阻断，
+    应通过批量工具调用、大结果落盘和单次聚合验证减少上下文与 Token 消耗。
+
+policy:
+  allow_implicit_invocation: false
+
+metadata:
+  version: 1.1.1
+
