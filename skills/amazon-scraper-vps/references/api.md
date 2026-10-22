@@ -2,6 +2,8 @@
 
 ## Authentication
 
+The public client requires an explicit HTTPS base URL and token. HTTP URLs,
+including loopback, are rejected. Private SSH profiles are not used.
 Set the token in the process environment:
 
 ```text
@@ -19,7 +21,7 @@ Never put the token in a URL, source file, output, or chat response.
 ## Health
 
 ```http
-GET /amazon-scraper/health
+GET /health
 ```
 
 Expected response:
@@ -37,7 +39,7 @@ Do not submit a scrape when `proxy_configured` is false.
 ## Scrape
 
 ```http
-POST /amazon-scraper/scrape
+POST /scrape
 Content-Type: application/json
 Authorization: Bearer <secret>
 
@@ -53,7 +55,7 @@ limited to 1–5. Only one job runs at a time.
 ## Secure image download
 
 ```http
-POST /amazon-scraper/image
+POST /image
 Content-Type: application/json
 Authorization: Bearer <secret>
 
@@ -88,3 +90,15 @@ python scripts/call_vps.py image "<amazon-image-url>" --output "<local-file>"
 - Search results may contain sponsored listings.
 - BSR and search ordering are different datasets.
 - Selectors can break after Amazon changes its page structure.
+
+## Client failure contract
+
+Paths above are relative to the configured base URL. `request()` and `download_image()`
+retain `(http_status, result_dict)` for service and business outcomes. Missing or invalid
+API configuration raises `RuntimeError` before credential lookup or network access;
+the CLI converts this into a fixed error and exit code 1. HTTP failures, proxy-disabled
+health, blocked/failed scraping, empty results, and invalid images return non-success.
+CLI exits 1 on failure, including HTTP 200 with unsuccessful business status.
+Errors use fixed categories; credentials and service error bodies are not exposed.
+The client validates Amazon US targets, checks proxy readiness, rejects redirects,
+and checks image size, MIME type and signature before replacing an output file.

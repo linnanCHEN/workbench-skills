@@ -45,18 +45,18 @@
     },
     {
       "path": "skills/amazon-scraper-vps/references/api.md",
-      "bytes": 1959,
-      "sha256": "45836c427073888630d8713cf59f563d9f3b716243e03261a9447b9dacac03a6"
+      "bytes": 2953,
+      "sha256": "ae3097722b07f716d2c62880fad7a4365551601cbc2ebc11ebf14afb26bdaf7d"
     },
     {
       "path": "skills/amazon-scraper-vps/scripts/call_vps.py",
-      "bytes": 6849,
-      "sha256": "f834c6193cde06b6305ac349e83cc485d387441cc2e5eff7f83d4f396a6074af"
+      "bytes": 10161,
+      "sha256": "2f4a5b439160b14d1f1176bfac0263e9a534b7917066af26ff6f2719a93b83e5"
     },
     {
       "path": "skills/amazon-scraper-vps/SKILL.md",
-      "bytes": 3632,
-      "sha256": "709b00ff288cd2942300beba1d2152aba190226637aa5f66768f93332a36ef8f"
+      "bytes": 4471,
+      "sha256": "2c0eb9681a029522109ae4cc1420a84ae55b6f37bd1b159c8a4af7ed1df76062"
     },
     {
       "path": "skills/amazon-scraper-vps/tests/test_public_config.py",
@@ -167,6 +167,17 @@
       "path": "skills/helium10-keyword-research-v1-1-0/tests/test_context_efficiency_contract.py",
       "bytes": 1973,
       "sha256": "55f3c9b716df5b6848dd0431f9f0e666fef700cad31c7f0764d5d61b13bc69d2"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/references/golden-set.md",
+      "bytes": 1164,
+      "sha256": "66e46f2208d7a45394ab7bb781b2416b2c04032431dd29c85b291af5f87b3376"
+    },
+    {
+      "path": "skills/amazon-scraper-vps/tests/test_api_safety.py",
+      "bytes": 8952,
+      "sha256": "a922d12739aa0e3e44411ad62ee549e224c82e0080b414349bcc76f0d44e3dc3"
     }
-  ]
+  ],
+  "snapshot_date": "2026-10-22"
 }

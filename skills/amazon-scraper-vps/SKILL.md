@@ -23,13 +23,23 @@ Use the VPS API for Amazon collection. Do not run the original local
 - Treat `boughtPastMonth` as Amazon's displayed estimate, not verified sales.
 - Treat keyword-search results as search ranking, not official BSR ranking.
 
-## Endpoint
+## Inputs, outputs, and endpoint
+
+Input: an authorized HTTPS Amazon US page URL (1–5 pages) or Amazon CDN image URL.
+Output: an HTTP-style status and JSON result; images return `status: saved`, local
+`path`, `content_type`, and `bytes`. Missing data is never invented. Upstream HTTP
+errors retain their status; invalid local requests and unsuccessful business results
+use non-success statuses.
+Not for account changes, ads, CAPTCHA solving, local scraping, or competitor decisions.
 
 Configure your own authenticated HTTPS VPS base URL with
 `AMAZON_SCRAPER_VPS_URL`, for example `https://scraper.example.com/amazon-scraper`.
 The public package has no default service address. Missing or invalid configuration
 fails before any request. Configure `AMAZON_SCRAPER_VPS_TOKEN` separately; never
 put credentials in the URL. No service access or account authorization is included.
+The public client uses only an explicitly configured HTTPS API. It does not read
+private SSH profiles, use SSH transport, or allow loopback HTTP as an exception.
+Missing or invalid configuration stops before credential lookup or network access.
 
 ## Workflow
 
@@ -78,7 +88,8 @@ Confirm the response says `status: saved`, then inspect and display the local
 file. Do not open or embed the source Amazon image URL in a browser or message.
 
 Read [references/api.md](references/api.md) for the request and response
-contract or troubleshooting status codes.
+contract or troubleshooting status codes. Regression cases are in
+[golden-set](references/golden-set.md); run `python -B -m unittest discover -s tests`.
 
 ## Deployment asset
 
